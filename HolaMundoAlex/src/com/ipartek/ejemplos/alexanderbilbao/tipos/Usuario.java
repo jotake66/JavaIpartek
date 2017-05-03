@@ -1,7 +1,7 @@
 package com.ipartek.ejemplos.alexanderbilbao.tipos;
 
 public class Usuario {
-	private String nombre, pass;
+	private String nombre, pass, errores;
 
 	@Override
 	public int hashCode() {
@@ -40,6 +40,10 @@ public class Usuario {
 		this.pass = pass;
 	}
 
+	public Usuario() {
+		this("anonimo", "passanonimo");
+	}
+
 	@Override
 	public String toString() {
 		return "Usuario [nombre=" + nombre + ", pass=" + pass + "]";
@@ -59,5 +63,13 @@ public class Usuario {
 
 	public void setPass(String pass) {
 		this.pass = pass;
+	}
+
+	public String getErrores() {
+		return errores;
+	}
+
+	public void setErrores(String errores) {
+		this.errores = errores;
 	}
 }
