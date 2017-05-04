@@ -1,6 +1,6 @@
 
 	<footer>
-		<p>&copy;2017 Javier Lete...</p>
+		<p>&copy;2017 Alex & Co.</p>
 	</footer>
 </body>
 </html>
