@@ -2,7 +2,7 @@ package com.ipartek.ejemplos.alexanderbilbao.dal;
 
 import com.ipartek.ejemplos.alexanderbilbao.tipos.Usuario;
 
-public class UsuariosDALFijo implements UsuariosDAL {
+public class UsuariosDALUsuarioUnico implements UsuariosDAL {
 
 	private Usuario usuario;
 

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ipartek.ejemplos.alexanderbilbao.dal.UsuariosDAL;
-import com.ipartek.ejemplos.alexanderbilbao.dal.UsuariosDALFijo;
+import com.ipartek.ejemplos.alexanderbilbao.dal.UsuariosDALUsuarioUnico;
 import com.ipartek.ejemplos.alexanderbilbao.tipos.Usuario;
 
 @WebServlet(name = "Saludo", urlPatterns = { "/hola" })
@@ -22,7 +22,7 @@ public class HolaMundo extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UsuariosDAL usuariosDAL = new UsuariosDALFijo();
+		UsuariosDAL usuariosDAL = new UsuariosDALUsuarioUnico();
 
 		usuariosDAL.alta(new Usuario("javi", "Lete"));
 
@@ -52,7 +52,5 @@ public class HolaMundo extends HttpServlet {
 
 		// out.println("Hola " + nombre);
 		// out.println(new java.util.Date());
-
 	}
-
 }
