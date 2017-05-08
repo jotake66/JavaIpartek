@@ -1,11 +1,11 @@
 <%@ include file="includes/cabecera.jsp" %>
 
-	<h2>Login</h2>
+	<h2>Formulario de usuarios</h2>
 	
 	<jsp:useBean id="usuario" scope="request"
 		class="com.ipartek.ejemplos.alexanderbilbao.tipos.Usuario" />
 
-	<form action="login" method="post">
+	<form action="usuariocrud" method="post">
 		<fieldset>
 			<label for="nombre">Nombre</label> <input id="nombre" name="nombre"
 			  required="required" minlength="4" value="${usuario.nombre}" />
@@ -15,8 +15,13 @@
 				name="pass" />
 		</fieldset>
 		<fieldset>
-			<input type="submit" value="Login" />
+			<label for="pass2">Contraseña otra vez</label> <input type="password" id="pass2"
+				name="pass2" />
+		</fieldset>
+		<fieldset>
+			<input type="submit" value="Alta" />
 			<p class="errores">${usuario.errores}</p>
 		</fieldset>
 	</form>
+	
 <%@ include file="includes/pie.jsp" %>

@@ -19,13 +19,13 @@ import com.ipartek.ejemplos.alexanderbilbao.tipos.Usuario;
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	static final String RUTA = "/WEB-INF/vistas/";
+	/* package */static final String RUTA = "/WEB-INF/vistas/";
 	private static final String RUTA_PRINCIPAL = RUTA + "principal.jsp";
 	private static final String RUTA_LOGIN = RUTA + "login.jsp";
 
-	private static final int TIEMPO_INACTIVIDAD = 30 * 60;
+	public static final int TIEMPO_INACTIVIDAD = 30 * 60;
 
-	static final int MINIMO_CARACTERES = 4;
+	/* package */static final int MINIMO_CARACTERES = 4;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
@@ -72,9 +72,13 @@ public class LoginServlet extends HttpServlet {
 
 		// ESTADOS
 		boolean esValido = usuariosDAL.validar(usuario);
+
 		boolean sinParametros = usuario.getNombre() == null;
+
 		boolean esUsuarioYaRegistrado = session.getAttribute("usuario") != null;
+
 		boolean quiereSalir = "logout".equals(opcion);
+
 		boolean nombreValido = usuario.getNombre() != null && usuario.getNombre().length() >= MINIMO_CARACTERES;
 		boolean passValido = !(usuario.getPass() == null || usuario.getPass().length() < MINIMO_CARACTERES);
 
