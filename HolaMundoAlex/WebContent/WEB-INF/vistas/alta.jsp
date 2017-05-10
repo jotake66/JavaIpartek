@@ -2,8 +2,6 @@
 
 	<h2>Alta de usuarios</h2>
 	
-	<jsp:useBean id="usuario" scope="request"
-		class="com.ipartek.ejemplos.alexanderbilbao.tipos.Usuario" />
 
 	<form action="alta" method="post">
 		<fieldset>
