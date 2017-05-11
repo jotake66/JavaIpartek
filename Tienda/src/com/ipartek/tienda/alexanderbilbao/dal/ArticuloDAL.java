@@ -2,15 +2,16 @@ package com.ipartek.tienda.alexanderbilbao.dal;
 
 
 public interface ArticuloDAL {
-	public void alta(Usuario usuario);
 
-	public void modificar(Usuario usuario);
+	public void alta(Articulo idarticulo);
 
-	public void borrar(Usuario usuario);
+	public void modificar(Idarticulo idarticulo);
 
-	public Usuario buscarPorId(String id);
+	public void borrar(Idarticulo idarticulo);
 
-	public Usuario[] buscarTodosLosUsuarios();
+	public Idarticulo buscarPorId(String id);
 
-	public boolean validar(Usuario usuario);
+	public Idarticulo[] buscarTodosLosArticulos();
+
+	public boolean validar(Idarticulo idarticulo);
 }

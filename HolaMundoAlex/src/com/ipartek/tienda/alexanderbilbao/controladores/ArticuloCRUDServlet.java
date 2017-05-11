@@ -9,9 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.ipartek.tienda.alexanderbilbao.tipos.Articulo;
+import com.ipartek.ejemplos.alexanderbilbao.tipos.Usuario;
 import com.ipartek.tienda.alexanderbilbao.dal.ArticuloDAL;
 import com.ipartek.tienda.alexanderbilbao.dal.DALFactoryTienda;
+import com.ipartek.tienda.alexanderbilbao.tipos.Articulo;
 
 @WebServlet("/articulocrud")
 public class ArticuloCRUDServlet extends HttpServlet {
@@ -28,10 +29,9 @@ public class ArticuloCRUDServlet extends HttpServlet {
 		ArticuloDAL dal = (ArticuloDAL) application.getAttribute("dal");
 
 		if (dal == null) {
-			dal = DALFactoryTienda.getArticuloDAL();
+			dal = DALFactoryTienda.getIDidarticulo();
 
-			dal.alta(new Usuario(int(Idarticulo()) , "nombre" , "descripcion" , "precio()");
-			dal.alta(new Usuario("usuario2", "pass2"));
+			dal.alta(new Articulo("ArticuloDal()", "nombre", "descripcion", "precio()"));
 
 			application.setAttribute("dal", dal);
 		}
@@ -40,11 +40,11 @@ public class ArticuloCRUDServlet extends HttpServlet {
 
 		if (op == null) {
 
-			Usuario[] usuarios = dal.buscarTodosLosUsuarios();
+			Articulo[] idarticulo = dal.buscarTodosLoArticulos();
 
-			request.setAttribute("usuarios", usuarios);
+			request.setAttribute("usuarios", idarticulo);
 
-			request.getRequestDispatcher(RUTA_LISTADO).forward(request, response);
+			request.getRequestDispatcher(RUTA_LISTADO_TIENDA).forward(request, response);
 		} else {
 			String id = request.getParameter("id");
 
@@ -53,13 +53,13 @@ public class ArticuloCRUDServlet extends HttpServlet {
 			switch (op) {
 			case "modificar":
 			case "borrar":
-				usuario = dal.buscarPorId(id);
-				request.setAttribute("usuario", usuario);
+				idarticulodal = dal.buscarPorId(id);
+				request.setAttribute("articulo", idarticulodal);
 			case "alta":
-				request.getRequestDispatcher(RUTA_FORMULARIO).forward(request, response);
+				request.getRequestDispatcher(RUTA_FORMULARIO_TIENDA).forward(request, response);
 				break;
 			default:
-				request.getRequestDispatcher(RUTA_LISTADO).forward(request, response);
+				request.getRequestDispatcher(RUTA_LISTADO_TIENDA).forward(request, response);
 			}
 		}
 	}

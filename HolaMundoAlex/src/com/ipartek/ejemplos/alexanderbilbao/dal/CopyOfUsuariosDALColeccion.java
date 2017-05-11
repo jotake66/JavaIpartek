@@ -1,11 +1,11 @@
-package com.ipartek.tienda.alexanderbilbao.dal;
+package com.ipartek.ejemplos.alexanderbilbao.dal;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import com.ipartek.ejemplos.alexanderbilbao.tipos.Usuario;
 
-public class UsuariosDALColeccion implements ArticuloDAL {
+public class CopyOfUsuariosDALColeccion implements UsuariosDAL {
 
 	private Map<String, Usuario> usuarios = new HashMap<String, Usuario>();
 

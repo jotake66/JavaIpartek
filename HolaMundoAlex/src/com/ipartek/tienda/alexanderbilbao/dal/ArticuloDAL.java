@@ -1,17 +1,18 @@
 package com.ipartek.tienda.alexanderbilbao.dal;
 
-import com.ipartek.ejemplos.alexanderbilbao.tipos.Usuario;
+import com.ipartek.tienda.alexanderbilbao.tipos.Articulo;
 
 public interface ArticuloDAL {
-	public void alta(Usuario usuario);
 
-	public void modificar(Usuario usuario);
+	public void alta(Articulo idarticulo);
 
-	public void borrar(Usuario usuario);
+	public void modificar(Articulo idarticulo);
 
-	public Usuario buscarPorId(String id);
+	public void borrar(Articulo idarticulo);
 
-	public Usuario[] buscarTodosLosUsuarios();
+	public Articulo buscarPorId(String id);
 
-	public boolean validar(Usuario usuario);
+	public Articulo[] buscarTodosLosArticulos();
+
+	public boolean validar(Articulo idarticulo);
 }

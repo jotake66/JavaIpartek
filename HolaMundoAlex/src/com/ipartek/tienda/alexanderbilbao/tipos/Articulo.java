@@ -93,4 +93,10 @@ public class Articulo {
 	public void setIprecio(int iprecio) {
 		this.iprecio = iprecio;
 	}
+
+	public static boolean containsKey(String nombre2) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }
