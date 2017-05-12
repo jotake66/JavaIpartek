@@ -2,7 +2,6 @@
     <wb-module deploy-name="Tienda">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/com.ipartektienda.qlexanderbilbaoServlet"/>
         <property name="context-root" value="Tienda"/>
         <property name="java-output-path" value="/Tienda/build/classes"/>
     </wb-module>

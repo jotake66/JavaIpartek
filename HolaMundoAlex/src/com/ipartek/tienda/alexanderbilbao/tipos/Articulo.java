@@ -65,6 +65,10 @@ public class Articulo {
 		this.iprecio = precio;
 	}
 
+	public Articulo(String string, String string2, String string3, String string4) {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public String toString() {
 		return "Articulo [nombre=" + nombre + ", descripcion=" + descripcion + ", idarticulo=" + idarticulo + ", iprecio=" + iprecio + "]";

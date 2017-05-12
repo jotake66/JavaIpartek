@@ -1,4 +1,4 @@
-<%@ include file="includes/cabecera.jsp" %>
+<%@ include file="includesTienda/cabeceraTienda.jsp" %>
 
 	<h2>Login</h2>
 	
@@ -19,4 +19,4 @@
 			<p class="errores">${usuario.errores}</p>
 		</fieldset>
 	</form>
-<%@ include file="includes/pie.jsp" %>
+<%@ include file="includesTienda/pieTienda.jsp" %>

@@ -1,4 +1,4 @@
-<%@ include file="includes/cabecera.jsp"%>
+<%@ include file="includesTienda/cabeceraTienda.jsp"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
@@ -8,9 +8,8 @@
 	<thead>
 		<tr>
 			<th>Operaciones</th>
-			<th>Usuario</th>
-			<th>Contraseña</th>
-		</tr>
+			<th>Código de Articulo</th>
+			<th>Contraseña</th>	</tr>
 	</thead>
 	<tbody>
 		<c:forEach items="${requestScope.usuarios}" var="usuario">
@@ -28,4 +27,4 @@
 
 <a href="?op=alta">Alta</a>
 
-<%@ include file="includes/pie.jsp"%>
+<%@ include file="includesTienda/pieTienda.jsp"%>

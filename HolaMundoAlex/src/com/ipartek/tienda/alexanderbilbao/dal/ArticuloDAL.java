@@ -15,4 +15,6 @@ public interface ArticuloDAL {
 	public Articulo[] buscarTodosLosArticulos();
 
 	public boolean validar(Articulo idarticulo);
+
+	void alta();
 }

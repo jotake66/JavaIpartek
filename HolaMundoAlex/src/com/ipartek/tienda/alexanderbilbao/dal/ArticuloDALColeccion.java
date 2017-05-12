@@ -5,7 +5,7 @@ import java.util.Map;
 
 import com.ipartek.tienda.alexanderbilbao.tipos.Articulo;
 
-public abstract class ArticuloDALColeccion implements ArticuloDAL {
+public class ArticuloDALColeccion implements ArticuloDAL {
 
 	private Map<String, Articulo> idarticulo = new HashMap<String, Articulo>();
 
@@ -18,17 +18,17 @@ public abstract class ArticuloDALColeccion implements ArticuloDAL {
 	}
 
 	@Override
-	public boolean validar(Articulo idarticulo) {
+	public boolean validar(Articulo idarticulodal) {
 		return idarticulo.containsValue(idarticulodal);
 	}
 
 	@Override
-		public void modificar(Articulo idarticulo) {
-			if (!idaticulo.containsKey(idarticulodal.getNombre()))
-				throw new DALException("Intento de modificar usuario no existente " + idarticulodal);
+	public void modificar(Articulo idarticulodal) {
+		if (!idarticulo.containsKey(idarticulodal.getNombre()))
+			throw new DALException("Intento de modificar articulo no existente " + idarticulodal);
 
-			idarticulo.put(idarticulodal.getNombre(), idarticulodal;
-		}
+		idarticulo.put(idarticulodal.getNombre(), idarticulodal);
+	}
 
 	@Override
 	public void borrar(Articulo idarticulodal) {
@@ -37,11 +37,11 @@ public abstract class ArticuloDALColeccion implements ArticuloDAL {
 
 	@Override
 	public Articulo buscarPorId(String id) {
-		return idarticulodal.get(id);
+		return idarticulo.get(id);
 	}
 
 	@Override
-	public Usuario[] buscarTodosLosUsuarios() {
+	public Articulo[] buscarTodosLosArticulos() {
 		// Usuario[] arr = new Usuario[usuarios.size()];
 		//
 		// int i = 0;
@@ -52,6 +52,12 @@ public abstract class ArticuloDALColeccion implements ArticuloDAL {
 		// return arr;
 
 		return idarticulo.values().toArray(new Articulo[idarticulo.size()]);
+	}
+
+	@Override
+	public void alta() {
+		// TODO Auto-generated method stub
+
 	}
 
 }

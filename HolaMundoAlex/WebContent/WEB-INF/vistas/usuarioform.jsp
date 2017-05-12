@@ -24,4 +24,4 @@
 		</fieldset>
 	</form>
 	
-<%@ include file="includes/pie.jsp" %>
+<%@ include file="includesTienda/pieTienda.jsp" %>

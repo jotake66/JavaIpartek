@@ -1,4 +1,4 @@
-<%@ include file="includes/cabecera.jsp" %>
+<%@ include file="includesTienda/cabeceraTienda.jsp" %>
 
 	<h2>Alta de usuarios</h2>
 	
@@ -22,4 +22,4 @@
 		</fieldset>
 	</form>
 	
-<%@ include file="includes/pie.jsp" %>
+<%@ include file="includesTienda/pieTienda.jsp" %>

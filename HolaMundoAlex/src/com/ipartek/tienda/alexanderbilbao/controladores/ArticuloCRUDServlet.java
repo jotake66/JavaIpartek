@@ -9,9 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.ipartek.ejemplos.alexanderbilbao.tipos.Usuario;
 import com.ipartek.tienda.alexanderbilbao.dal.ArticuloDAL;
-import com.ipartek.tienda.alexanderbilbao.dal.DALFactoryTienda;
+import com.ipartek.tienda.alexanderbilbao.dal.ArticuloDALFactory;
 import com.ipartek.tienda.alexanderbilbao.tipos.Articulo;
 
 @WebServlet("/articulocrud")
@@ -29,9 +28,9 @@ public class ArticuloCRUDServlet extends HttpServlet {
 		ArticuloDAL dal = (ArticuloDAL) application.getAttribute("dal");
 
 		if (dal == null) {
-			dal = DALFactoryTienda.getIDidarticulo();
+			dal = ArticuloDALFactory.getArticuloDAL();
 
-			dal.alta(new Articulo("ArticuloDal()", "nombre", "descripcion", "precio()"));
+			dal.alta(new Articulo("idarticiulo()", "nombre", "descripcion", "precio()"));
 
 			application.setAttribute("dal", dal);
 		}
@@ -40,15 +39,15 @@ public class ArticuloCRUDServlet extends HttpServlet {
 
 		if (op == null) {
 
-			Articulo[] idarticulo = dal.buscarTodosLoArticulos();
+			Articulo[] idarticulo = dal.buscarTodosLosArticulos();
 
-			request.setAttribute("usuarios", idarticulo);
+			request.setAttribute("idarticulo", idarticulo);
 
 			request.getRequestDispatcher(RUTA_LISTADO_TIENDA).forward(request, response);
 		} else {
 			String id = request.getParameter("id");
 
-			Usuario usuario;
+			Articulo idarticulodal;
 
 			switch (op) {
 			case "modificar":
