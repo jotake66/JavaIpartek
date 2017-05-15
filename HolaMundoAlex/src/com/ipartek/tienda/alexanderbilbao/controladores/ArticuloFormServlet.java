@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class UsuarioFormServlet
  */
-@WebServlet("/ArticuloFormServlet")
+@WebServlet("/ArticuloForm")
 public class ArticuloFormServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

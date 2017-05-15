@@ -14,8 +14,8 @@
 	</header>
 	<nav>
 		<ul>
-		<li><a href="login">Login</a></li>        
-			<li><a href="alta">Alta</a></li>
+	
+			<li><a href="ArticuloForm?opcion=altaTienda">Alta</a></li>
 			<li><a href="login?opcion=logout">Salir</a></li> 
 		</ul>
 	</nav>

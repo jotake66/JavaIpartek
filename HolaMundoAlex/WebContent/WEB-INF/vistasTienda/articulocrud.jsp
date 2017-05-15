@@ -7,14 +7,10 @@
 <table border="1">
 	<thead>
 		<tr>
-			<th>Selecione la Opción</th>
-			<tr>                    </tr>
 			<th>Código de Articulo: </th>
-			<tr>                    </tr>
-			<th>Nombre ....: </th>
-			<th>Descripción: </th>
-			<th>Precio ....: </th>
-			<th>
+			<th>Nombre ...........: </th>
+			<th>Descripción ......: </th>
+			<th>Precio ...........: </th>
 		</tr>
 	</thead>
 	<tbody>
@@ -30,7 +26,5 @@
 		</c:forEach>
 	</tbody>
 </table>
-
-<a href="?op=alta">Alta</a>
 
 <%@ include file="includesTienda/pieTienda.jsp"%>
